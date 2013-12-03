@@ -1,6 +1,15 @@
 @import "bootstrap";
 
+/* mixins, variables, etc. */
+
 $lightGray: #999;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 
 /* universal */
 
@@ -101,13 +110,6 @@ ul {
   }
 }
 
-/* miscellaneous */
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 
 .debug_dump {
@@ -176,4 +178,19 @@ input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
 }

@@ -7,6 +7,11 @@ gem 'rails', '4.0.1'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '3.0.0.beta1'
+  gem 'better_errors'
+  gem 'quiet_assets'
+  gem 'faker', '1.1.2'
+  gem 'will_paginate', '3.0.4'
+  gem 'binding_of_caller'
 end
 
 group :test do
@@ -22,6 +27,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
+
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
